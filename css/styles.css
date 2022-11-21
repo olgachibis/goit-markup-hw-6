@@ -238,8 +238,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
 
     width: 528px;
-    height: 581px;
-
+   
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
    
@@ -252,9 +251,11 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
      fill: var(--social-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-     .modal-icon-close:hover{
-    fill: var(--accent-color);
-     }
+         .modal-icon:hover .modal-icon-close,
+         .modal-icon:focus .modal-icon-close {
+             fill: var(--accent-color);
+             cursor: pointer;
+         }
 
 .modal-icon{
     position: absolute;
@@ -269,6 +270,7 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
+
   
 } 
 /* Форма реєстрації */
@@ -276,7 +278,6 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
   display: flex;
   flex-direction: column;
-  padding: 12px;
   width: 100%;
 /* outline: 1px solid tomato; */
 }
@@ -338,9 +339,8 @@ transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
 .icon-form{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 12px;
     transform: translateY(50%);
-    margin-left: 12px;
     fill: var(--primary-text-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -355,8 +355,8 @@ transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
     fill: var(--accent-color);
 }
 
-.form-area:hover,
-.form-area:focus {
+.comment:hover,
+.comment:focus {
     border-color: var(--accent-color);
 }
 .form textarea:placeholder-shown{
@@ -821,8 +821,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .form-field-footer {
     display: flex;
     align-items: flex-end;
-    margin-top: 20px;
-}
+    }
 .form-field-footer input {
     width: 358px;
     height: 50px;
@@ -861,6 +860,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: calc(30/16);
 
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -871,7 +871,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     width: 200px;
     height: 50px;
-    padding-left: 28px;
     margin-left: 12px;
     border-color: transparent;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -955,12 +954,12 @@ margin: auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
 .feedback:focus,
 .feedback:hover {
     background-color: var(--accent-color);
-    color: var(--primary-white-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
 
 }
 .button.subscribe-button {
@@ -1009,7 +1008,3 @@ margin: auto;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback:hover,
-.feedback:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
