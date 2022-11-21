@@ -409,19 +409,21 @@ color: var(--secondary-text-color);
   
   border: 2px solid var(--primary-text-color);
   border-radius:2px; 
-  fill: transparent;
+  fill: transparent; 
+  
   transition: fill 250ms cubic-bezier(0.4,0,0.2,1),border 250ms cubic-bezier(0.4,0,0.2,1);
 }
-.checkbox:hover + .contract-icon-mark,
+
+/* .checkbox:hover + .contract-icon-mark,
 .checkbox:focus + .contract-icon-mark{
    border: 2px solid var(--accent-color);
  
-}
+} */
 
 .checkbox:checked + .contract-icon-mark{
   border:none;
   background-color:var(--accent-color);
-  fill: var(--primary-white-color);
+  fill: var(--primary-white-color); 
   transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
